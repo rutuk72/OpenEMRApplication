@@ -12,6 +12,8 @@ public class LoginPage {
 	private By errorLocator=By.xpath("//div[contains(text(),'Invalid')]");
 
 	private WebDriver driver;
+	
+	//driver
 
 	public LoginPage(WebDriver driver) {
 		this.driver = driver;
