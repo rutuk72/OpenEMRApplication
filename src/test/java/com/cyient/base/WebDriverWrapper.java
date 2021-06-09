@@ -30,7 +30,7 @@ public class WebDriverWrapper {
 		}
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		driver.get("https://demo.openemr.io/b/openemr");
+		driver.get("https://demo.openemr.io/openemr/interface/login/login.php?site=default");
 	}
 
 	@AfterMethod

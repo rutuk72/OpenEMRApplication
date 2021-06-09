@@ -12,26 +12,26 @@ import com.cyient.page.LoginPage;
 import com.cyient.utilities.DataProviderUtils;
 
 public class LoginTest extends WebDriverWrapper {
-
-	@Test(dataProvider="invalidCredentialData",dataProviderClass=DataProviderUtils.class)
-	public void invalidCredentialTest(String username, String password,String language,String expectedvalue) {
-
-		LoginPage login = new LoginPage(driver);
-		login.sendUsername(username);
-		login.sendPassword(password);
-		login.selectLanaguageByText(language);
-		login.clickOnLogin();
-
-		String actualValue = login.getErrorMessage();
-		Assert.assertEquals(actualValue,expectedvalue ); // on not matching --abort and method will be
-																			// resulted as failure
-	}
+//
+//	@Test(dataProvider="invalidCredentialData",dataProviderClass=DataProviderUtils.class)
+//	public void invalidCredentialTest(String username, String password,String language,String expectedvalue) {
+//
+//		LoginPage login = new LoginPage(driver);
+//		login.sendUsername(username);
+//		login.sendPassword(password);
+//		login.selectLanaguageByText(language);
+//		login.clickOnLogin();
+//
+//		String actualValue = login.getErrorMessage();
+//		Assert.assertEquals(actualValue,expectedvalue ); // on not matching --abort and method will be
+//																			// resulted as failure
+//	}
 
 
 	
 	
 	
-	@Test(dataProvider="validData",dataProviderClass=DataProviderUtils.class)
+	@Test(dataProvider="validCredentialExcelData",dataProviderClass=DataProviderUtils.class)
 	public void validCredentialTest(String username,String password,String language,String expectedvalue) {
 
 		LoginPage login = new LoginPage(driver);
